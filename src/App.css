@@ -1,28 +1,67 @@
-.App {
-  text-align: center;
+#root{
+  background-image: url("./app/assets/img/bg.jpg");
+}
+.home-cover{
+  background-color: rgba(255, 255, 255, 0.9);
+}
+::-webkit-scrollbar {
+  width: 10px;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+/* Track */
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+/* Handle */
+::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  background: #F44336; 
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+::-webkit-scrollbar-thumb:window-inactive {
+background: #F44336; 
+}
+.headerTop{
+  background: #F44336;
+}
+.headerTop a{
+  color: #ffffff;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+.headerTop a:hover{
+  color: #ffffff;
+  text-transform: uppercase;
 }
 
-.App-title {
-  font-size: 1.5em;
+/* Let's get this party started */
+.newsbar::-webkit-scrollbar {
+  width: 6px;
 }
 
-.App-intro {
-  font-size: large;
+/* Track */
+.newsbar::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+/* Handle */
+.newsbar::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  background: #F44336; 
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+.newsbar::-webkit-scrollbar-thumb:window-inactive {
+background: #F44336; 
+}
+
+.newsbar{
+  height: 600px; 
+  overflow-y: scroll;
 }

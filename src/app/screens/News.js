@@ -36,37 +36,39 @@ class News extends Component{
         const bull = <span className={classes.bullet}>•</span>;
         //console.log(this.props)
         return (
-            <Container>
-                <h3 className="page-header">IN THE NEWS TODAY</h3>
-                <Row>
-                    <Col md="9">
-                        <NewsCardContainer news={this.props.news} />
+            <section style={{paddingTop: 20}}>
+                <Container>
+                    <h3 className="page-header">IN THE NEWS TODAY</h3>
+                    <Row>
+                        <Col md="9">
+                            <NewsCardContainer news={this.props.news} />
+                        </Col>
+                        <Col md="3">
+                            <Card className={classes.card}>
+                                <CardContent>
+                                <Typography type="body1" className={classes.title}>
+                                    Word of the Day
+                                </Typography>
+                                <Typography type="headline" component="h2">
+                                    be{bull}nev{bull}o{bull}lent
+                                </Typography>
+                                <Typography type="body1" className={classes.pos}>
+                                    adjective
+                                </Typography>
+                                <Typography component="p">
+                                    well meaning and kindly.<br />
+                                    {'"a benevolent smile"'}
+                                </Typography>
+                                </CardContent>
+                                <CardActions>
+                                <Button dense>Learn More</Button>
+                                </CardActions>
+                            </Card>
                     </Col>
-                    <Col md="3">
-                        <Card className={classes.card}>
-                            <CardContent>
-                            <Typography type="body1" className={classes.title}>
-                                Word of the Day
-                            </Typography>
-                            <Typography type="headline" component="h2">
-                                be{bull}nev{bull}o{bull}lent
-                            </Typography>
-                            <Typography type="body1" className={classes.pos}>
-                                adjective
-                            </Typography>
-                            <Typography component="p">
-                                well meaning and kindly.<br />
-                                {'"a benevolent smile"'}
-                            </Typography>
-                            </CardContent>
-                            <CardActions>
-                            <Button dense>Learn More</Button>
-                            </CardActions>
-                        </Card>
-                </Col>
-                </Row>
-              
-           </Container>
+                    </Row>
+                
+            </Container>
+           </section>
         )
     }
 }

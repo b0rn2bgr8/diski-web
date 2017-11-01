@@ -3,7 +3,7 @@ import { FETCH_USER, FETCH_POST, FETCH_FIXTURE, FETCH_NEWS, FETCH_TOURNAMENT } f
 export const fetchUser = () => async dispatch => {
        const res = await fetch('/user/get-current-user', {credentials: "include"});
        const data = await res.json();
-       console.log("data", data.user)
+       //console.log("data", data.user)
        
         dispatch({type: FETCH_USER, payload: data.user});
     };
@@ -18,7 +18,7 @@ export const fetchUser = () => async dispatch => {
         const res = await fetch('/api/news', {credentials: "include"});
         const data = await res.json();
 
-        dispatch({type: FETCH_NEWS, payload: data.data});
+        dispatch({type: FETCH_NEWS, payload: data});
     }
     export const fetchFixture = () => async dispatch =>{
         const res = await fetch('/api/fixture', {credentials: "include"});

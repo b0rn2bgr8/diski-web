@@ -31,7 +31,7 @@ class App extends Component {
     return (
       <BrowserRouter>
         <MuiThemeProvider theme={theme}>
-        <div>
+        <div className="home-cover">
           <HeaderComponent  logout={this.userLogout} />
           <Route exact path="/" component={Home} />
           <Route path='/fixture' component ={Fixture}/>
@@ -48,16 +48,16 @@ class App extends Component {
   }
   async userLogout(){
     fetch('/user/logout', {credentials: "include"})
-    .then(res =>{window.location.reload()});
+    .then(res =>{window.location.href = "/"});
   }
 
   componentDidMount(){
-    console.log(this.props);
+    //console.log(this.props);
     this.props.fetchUser();
     this.props.fetchPost();
      this.props.fetchNews();
     this.props.fetchTournament();
-    // this.props.fetchFixture();
+    this.props.fetchFixture();
   }
 }
 

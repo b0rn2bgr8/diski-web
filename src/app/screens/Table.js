@@ -22,7 +22,7 @@ class Table extends Component{
         }
     }
     render(){
-        console.log("table", this.props);
+        //console.log("table", this.props);
         const { classes, theme } = this.props;
         return (
                 <div className={classes.root}>

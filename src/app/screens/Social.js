@@ -47,10 +47,10 @@ class Social extends Component{
         this.setState({ open: !this.state.open });
       };
     render(){
-        console.log("post",this.props)
+        //console.log("post",this.props)
         const { classes } = this.props;
         return (
-            <section>
+            <section style={{paddingTop: 20}}>
                 <Container>
                     <Row>
                         <Col md="3">
@@ -131,7 +131,9 @@ class Social extends Component{
                         </Col>
                         <Col md="3">
                                 <Label>Latest News Update</Label>
-                                <NewsSocialContainer news={this.props.news} />
+                                <section className="newsbar">
+                                <NewsSocialContainer  news={this.props.news} />
+                                </section>
                         </Col>
                     </Row>
                 </Container>
